@@ -24,6 +24,10 @@ namespace WindowsFormsApp1
         {
             connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
             connection.Open();
+            if (connection.State == ConnectionState.Open)
+            {
+                MessageBox.Show("", "");
+            }
         }
     }
 }
